@@ -1,0 +1,10 @@
+20 is Bad
+82 is Passable
+68 is Passable
+76 is Passable
+81 is Passable
+49 is Bad
+51 is Passable
+67 is Passable
+47 is Bad
+76 is Passable
