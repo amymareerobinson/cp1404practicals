@@ -4,7 +4,7 @@ Student Name: Amy Robinson
 Program - Broken Score
 """
 
-# TODO: Fix this!
+# Fix this!
 
 # score = float(input("Enter score: "))
 # if score < 0:
