@@ -8,6 +8,7 @@ FILENAME = "subject_data.txt"
 
 
 def main():
+    """Get data to display subject details."""
     data = get_data()
     display_subject_details(data)
 
