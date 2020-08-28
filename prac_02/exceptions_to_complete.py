@@ -10,12 +10,12 @@ finished = False
 result = 0
 while not finished:
     try:
-        # TODO: this line
+        # complete this line
         result = int(input("Enter result: "))
-        # TODO: this line
+        # complete this line
         finished = True
 
-    except ValueError:  # TODO - add something after except
+    except ValueError:  # - add something after except
         print("Please enter a valid integer.")
 
 print("Valid result is:", result)
