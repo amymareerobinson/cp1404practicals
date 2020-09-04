@@ -9,6 +9,7 @@ HEX_COLOURS = {"blueviolet": "#8a2be2", "coral": "#ff7f50",
                "hotpink": "#ff69b4", "brown": "#a52a2a",
                "chocolate": "#d2691e", "floralwhite": "#fffaf0",
                "navyblue": "#000080", "light": "#eedd82"}
+print(HEX_COLOURS)
 
 colour = input("Enter a hex colour: ").lower()
 
