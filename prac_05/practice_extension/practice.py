@@ -33,7 +33,7 @@ def main():
             change_existing_entry(name_address_dict)
 
         elif choice == 'P':
-            display_address(name_address_dict)
+            display_address_for_valid_name(name_address_dict)
 
         else:
             print("Invalid choice")
@@ -70,12 +70,14 @@ def get_valid_name(prompt):
 
 
 def enter_new_entry(name_address_dict):
+    """Enter a new entry into the dictionary."""
     name = get_valid_name("Name: ")
     address = get_address("Address: ")
     name_address_dict[name] = address
 
 
 def change_existing_entry(name_address_dict):
+    """Change an existing entry in the dictionary."""
     name = get_valid_name("Name for new address: ").lower()
     while name not in name_address_dict:
         print("Invalid; name not in dictionary")
@@ -84,7 +86,8 @@ def change_existing_entry(name_address_dict):
     name_address_dict[name] = new_address
 
 
-def display_address(name_address_dict):
+def display_address_for_valid_name(name_address_dict):
+    """Display the address for valid name in the dictionary."""
     name = get_valid_name("Name to retrieve address: ").lower()
     while name not in name_address_dict:
         print("Invalid; name not in dictionary")
