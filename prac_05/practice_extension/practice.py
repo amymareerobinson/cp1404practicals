@@ -12,6 +12,7 @@ MENU = "Menu:\n" \
        "Q - Quit"
 
 FILENAME = "address_data.txt"
+
 NAME_INDEX = 0
 ADDRESS_INDEX = 1
 
@@ -26,26 +27,13 @@ def main():
         print(name_address_dict)
 
         if choice == 'E':
-            name = get_valid_name("Name: ")
-            address = get_address("Address: ")
-            name_address_dict[name] = address
+            enter_new_entry(name_address_dict)
 
         elif choice == 'C':
-            name = get_valid_name("Name for new address: ").lower()
-            while name not in name_address_dict:
-                print("Invalid; name not in dictionary")
-                name = input("Name for new address: ").lower()
-
-            new_address = get_address("New address: ")
-            name_address_dict[name] = new_address
+            change_existing_entry(name_address_dict)
 
         elif choice == 'P':
-            name = get_valid_name("Name to retrieve address: ").lower()
-            while name not in name_address_dict:
-                print("Invalid; name not in dictionary")
-                name = input("Name to retrieve address: ").lower()
-
-            print(f"{name}'s address is {name_address_dict[name]}")
+            display_address(name_address_dict)
 
         else:
             print("Invalid choice")
@@ -79,6 +67,29 @@ def get_valid_name(prompt):
     """Get valid name."""
     name = input(prompt).lower()
     return name
+
+
+def enter_new_entry(name_address_dict):
+    name = get_valid_name("Name: ")
+    address = get_address("Address: ")
+    name_address_dict[name] = address
+
+
+def change_existing_entry(name_address_dict):
+    name = get_valid_name("Name for new address: ").lower()
+    while name not in name_address_dict:
+        print("Invalid; name not in dictionary")
+        name = input("Name for new address: ").lower()
+    new_address = get_address("New address: ")
+    name_address_dict[name] = new_address
+
+
+def display_address(name_address_dict):
+    name = get_valid_name("Name to retrieve address: ").lower()
+    while name not in name_address_dict:
+        print("Invalid; name not in dictionary")
+        name = input("Name to retrieve address: ").lower()
+    print(f"{name}'s address is {name_address_dict[name]}")
 
 
 def overwrite_data_to_file(name_address_dict):
