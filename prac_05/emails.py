@@ -22,7 +22,7 @@ def main():
             email_dict[email] = name
 
         else:
-            print("Invalid verification")
+            print("Invalid verification, name could not be entered!")
 
         email = input("Email: ")
 
