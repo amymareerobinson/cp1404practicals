@@ -1,7 +1,9 @@
 """
-CP1404/CP5632 Practical
-Demos of various os module examples
+CP1404 2020 - Practical 8
+Student Name: Amy Robinson
+Program - OS Demo
 """
+
 # import shutil
 import os
 
