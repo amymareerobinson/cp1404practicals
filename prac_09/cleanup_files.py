@@ -31,7 +31,8 @@ def get_fixed_filename(filename):
     empty_string = ' '
     filename.replace(" ", "_").replace(".TXT", ".txt")
     if "_" not in filename:
-        new_name = "_".join(''.join(empty_string + char if char.isupper() else char for char in filename).strip(empty_string).split(empty_string))
+        new_name = "_".join(''.join(empty_string + char if char.isupper()
+                                    else char for char in filename).strip(empty_string).split(empty_string))
 
     else:
         new_name = "_".join(filename.split("_")).title()
